@@ -1,0 +1,267 @@
+/* Set the entire page background */
+body {
+    background-color: #F5F5DC;
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+  }
+  
+  /* Outer container for the slider */
+  .container__slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5DC; 
+    border-radius: 15px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 5px solid #8B5E3C; /* Brown border */
+  }
+  
+  /* Wrapper to align slides */
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    width: 100%;
+  }
+  
+  /* Individual Slide */
+  .slider__item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    transition: transform 1s ease-in-out;
+    position: relative;
+  }
+  
+  /* Slide Image */
+  .slider__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect - Slight Zoom */
+  .slider__item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Overlay Effect */
+  .slider__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);  /* Black translucent cover */
+    color: #F5F5DC;  /* Beige text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  /* Show overlay on hover */
+  .slider__item:hover .slider__overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Left & Right Sections */
+  .overlay-left, .overlay-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Project Title */
+  .project-title1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Georgia", serif;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Click Here Button */
+  .project-link {
+    display: inline-block;
+    border: 2px solid #F5F5DC; /* Beige border */
+    color: #F5F5DC; /* Beige text */
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: none;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  
+  /* Right Side (Description) */
+  .project-description {
+    font-size: 16px;
+    font-family: "Georgia", serif;
+    max-width: 80%;
+    text-align: center; /* Center text */
+  }
+  
+  /* Improved Arrows */
+  .container__slider > button {
+    background-color: rgba(139, 94, 60, 0.9); /* Richer brown */
+    color: #F5F5DC; /* Beige */
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #F5F5DC; /* Beige border */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+  }
+  
+  /* Position the arrows inside the container */
+  .slider__btn-prev {
+    left: 10px;
+  }
+  
+  .slider__btn-next {
+    right: 10px;
+  }
+  
+  /* Hover Effect for Arrows */
+  .container__slider > button:hover {
+    background-color: #6D4C3D; /* Darker brown */
+    transform: translateY(-50%) scale(1.15);
+    border-color: #D2B48C; /* Lighter beige for contrast */
+  }
+  
+  /* Header Section Styling */
+  .slider-header h2 {
+    font-family: "Georgia", serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #8B5E3C; /* Brown color */
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Description under header */
+  .slider-header p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #5C4033; /* Darker brown */
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 2px solid #D2B48C; /* Beige border for subtle separation */
+    padding-top: 10px;
+    margin-bottom: 80px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container__slider {
+        height: 300px;
+    }
+  
+    .slider__item img {
+        border-radius: 5px;
+    }
+  
+    .slider__overlay {
+        flex-direction: column;
+        padding: 15px;
+    }
+  
+    .overlay-left, .overlay-right {
+        width: 100%;
+    }
+  
+    .project-title1{
+        font-size: 20px;
+    }
+  
+    .project-description {
+        font-size: 14px;
+    }
+  
+    .container__slider > button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+  
+    .slider-header h2 {
+        font-size: 28px;
+    }
+  
+    .slider-header p {
+        font-size: 16px;
+    }
+  }
+  
+  /* Dots (Indicators) Container */
+  .slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Individual Dot */
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(139, 94, 60, 0.5); /* Semi-transparent brown */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Active Dot */
+  .dot.active {
+    background-color: #8B5E3C; /* Solid brown for active dot */
+    transform: scale(1.2);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+

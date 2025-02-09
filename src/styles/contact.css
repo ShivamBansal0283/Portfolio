@@ -1,0 +1,150 @@
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Language Dropdown */
+.language-selection {
+  margin-top: 20px;
+}
+
+.language-dropdown {
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* Privacy & Terms */
+.privacy-btn {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
+}
+
+.privacy-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Privacy Modal */
+  .privacy-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .privacy-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .privacy-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-content p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .close-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .work-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .work-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px; /* Make text smaller */
+    font-weight: normal;
+  }
+  .icon-privacy-icon{
+   margin: auto;
+  }

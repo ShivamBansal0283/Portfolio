@@ -1,0 +1,297 @@
+
+
+  /* Ongoing Projects Section */
+  .ongoing-projects {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    /* background: #FAF3E0; Light beige */
+    /* border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .ongoing-projects h2 {
+    font-size: 28px;
+    color: #8B5E3C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  
+  .ongoing-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Ongoing Project Card */
+  .ongoing-card {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .ongoing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Expanded Card */
+  .ongoing-card.expanded {
+    width: 320px;
+    padding: 25px;
+    background: #f8ede3;
+  }
+  
+  /* Project Title */
+  .ongoing-card h3 {
+    font-size: 20px;
+    color: #5C4033;
+    margin-bottom: 10px;
+  }
+  
+  /* Project Description */
+  .ongoing-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Animated Progress */
+  .progress {
+    height: 100%;
+    background: #8B5E3C;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+  }
+  
+  /* Expanded Card Details */
+  .project-details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Responsive Fix */
+  @media (max-width: 768px) {
+    .ongoing-card {
+        width: 100%;
+    }
+  
+    .ongoing-card.expanded {
+        width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Projects Container */
+.projects-container {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.projects-heading {
+  font-size: 32px;
+  color: #8B5E3C;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+  /* Flip Card Grid */
+.completed-projects-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Flip Card Container */
+.flip-card {
+  width: 40%;
+  height: 400px;
+  perspective: 1000px; /* 3D Effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+/* Hover Flip Effect */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Front Side (Only Image) */
+.flip-card-front {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Back Side (Project Details) */
+.flip-card-back {
+  background: #232425; /* Muted Deep Blue - blends well with beige */
+  color: #EAEAEA; /* Soft white text for readability */
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project Title */
+.flip-card-back h3 {
+  font-size: 22px;
+  color: #a3a677f7;
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.flip-card-back p {
+  font-size: 14px;
+  color: #EAEAEA;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.15); /* Subtle transparency */
+  color: #EAEAEA;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.tech-icon1 {
+  font-size: 16px;
+  color: #a3a677f7;
+
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.project-link {
+  background: rgba(255, 255, 255, 0.15);
+  color: #EAEAEA;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+}
+/* Project Title Below Card */
+.project-title {
+  text-align: center;
+  font-size: 20px;
+  color: #5C4033;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .completed-projects-grid {
+      flex-direction: column;
+      align-items: center;
+  }
+  .flip-card {
+      width: 80%;
+  }
+}

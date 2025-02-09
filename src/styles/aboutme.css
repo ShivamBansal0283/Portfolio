@@ -1,0 +1,51 @@
+/* About Me Section Styling */
+.about-me-section {
+    background-color: #f5f5dc;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .about-me-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b5a2b;
+    margin-bottom: 1rem;
+  }
+  
+  .about-me-section p {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+  }
+  
+  .about-me-section a {
+    display: inline-block;
+    background-color: #8b5a2b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-me-section a:hover {
+    background-color: #6b4226;
+  }
+
+   /* Description under header */
+   .slider-header p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #5C4033; /* Darker brown */
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 2px solid #D2B48C; /* Beige border for subtle separation */
+    padding-top: 10px;
+    margin-bottom: 80px;
+  }

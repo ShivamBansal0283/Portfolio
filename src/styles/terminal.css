@@ -1,0 +1,68 @@
+/* Terminal Container */
+.terminal-container {
+    background-color: #1a1a1a;
+    color: #33ff33; /* Classic green text */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Terminal Header */
+.terminal-header {
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #33ff33;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Terminal Content */
+.terminal-content {
+    white-space: pre-line;
+    line-height: 1.6;
+    min-height: 200px;
+    word-wrap: break-word;
+}
+
+/* Terminal Input Line */
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: #33ff33;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    outline: none;
+    width: 80%;
+}
+
+.terminal-input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Blinking Cursor */
+.blinking-cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #33ff33;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

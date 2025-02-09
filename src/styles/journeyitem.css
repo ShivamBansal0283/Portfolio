@@ -1,0 +1,92 @@
+/* Timeline Item Styling */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    text-align: right;
+    left: 50%;
+    width: 50%;
+}
+
+/* Timeline Title */
+.timeline-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6b4226;
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: var(--animation-delay, 0s);
+}
+
+/* Timeline Details (Hidden Initially) */
+.timeline-details {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute;
+    left: -300px;
+    top: 0;
+    width: 280px;
+    text-align: left;
+}
+
+/* Show Details on Hover with Fade Animation */
+.timeline-item:hover .timeline-details {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Assign animation delays dynamically */
+.timeline-item:nth-child(1) .timeline-title {
+    --animation-delay: 0.2s;
+}
+.timeline-item:nth-child(2) .timeline-title {
+    --animation-delay: 0.4s;
+}
+.timeline-item:nth-child(3) .timeline-title {
+    --animation-delay: 0.6s;
+}
+.timeline-item:nth-child(4) .timeline-title {
+    --animation-delay: 0.8s;
+}
+.timeline-item:nth-child(5) .timeline-title {
+    --animation-delay: 1s;
+}
+
+/* Events styling - Same positioning as institutions but smaller text */
+.event-item {
+    padding: 40px 20px;
+    width: 50%;
+    /* text-align: right; */
+    left: 50%;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

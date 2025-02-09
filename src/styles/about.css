@@ -1,0 +1,71 @@
+/* About Me Player Card Layout */
+.about-me-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+/* Player Card Container */
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+}
+
+/* Thinking Character Styling */
+.thinking-guy {
+    width: 120px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    
+        color: #ffc300; /* Yellow */
+        font-size: 100px; /* Increase size */
+    
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Glitch Animation for About Me Hint Text */
+.about-me-hint {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    text-align: left;
+    position: relative;
+    animation: glitch 1.5s infinite;
+}
+
+/* @keyframes glitch {
+    0% { text-shadow: 1px 1px 0px rgba(255, 0, 0, 0.8), -1px -1px 0px rgba(0, 255, 0, 0.8); }
+    25% { text-shadow: -1px -1px 0px rgba(255, 0, 0, 0.8), 1px 1px 0px rgba(0, 255, 0, 0.8); }
+    50% { text-shadow: 2px -2px 0px rgba(0, 255, 255, 0.8), -2px 2px 0px rgba(255, 255, 0, 0.8); }
+    75% { text-shadow: -2px 2px 0px rgba(0, 255, 255, 0.8), 2px -2px 0px rgba(255, 255, 0, 0.8); }
+    100% { text-shadow: 1px 1px 0px rgba(255, 0, 0, 0.8), -1px -1px 0px rgba(0, 255, 0, 0.8); }
+} */
+
+.cmd-hint{
+    font-size: 12px;
+    color: burlywood;
+}

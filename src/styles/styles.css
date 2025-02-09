@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000814;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height */
+  }
+  
+  
+
+/* Make the main content expand dynamically */
+#root, .app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+  /* Navigation Bar */
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #001d3d;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Scales dynamically */
+  }
+  
+  nav ul li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav ul li:hover {
+    color: #ffc300;
+  }
+  
+  /* Hero Section */
+  .hero {
+    margin-top: 12vh;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3vw; /* Scales dynamically */
+    color: #ffc300;
+  }
+  
+  .hero p {
+    font-size: 1.2vw; /* Scales based on viewport */
+    color: #bbb;
+    margin-top: 1rem;
+  }
+  
+  .button-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-size: 1rem;
+  }
+  
+  .primary-btn {
+    background: #ffc300;
+    color: black;
+  }
+  
+  .primary-btn:hover {
+    background: #ffd60a;
+  }
+  
+  .secondary-btn {
+    border: 2px solid #ffc300;
+    background: transparent;
+    color: white;
+  }
+  
+  .secondary-btn:hover {
+    background: #003566;
+  }
+  
+  /* Social Media Links (Fixed but Responsive) */
+  .social-links {
+    position: fixed;
+    bottom: 3vh;
+    left: 3vw;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 1000;
+  }
+  
+  .social-links a {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-links a:hover {
+    color: #ffc300;
+    transform: scale(1.2);
+  }
+  
+  /* Footer (Dynamic)
+  footer {
+    margin-top: auto;
+    width: 100%;
+    background: #001d3d;
+    padding: 2vh 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #bbb;
+  }
+   */
+
+   footer {
+    width: 100%;
+    background: #001d3d;
+    padding: 2vh 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #bbb;
+    position: relative; /* Ensures it doesn’t overlap content */
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 5vw; /* Larger for small screens */
+    }
+    
+    .hero p {
+      font-size: 3vw;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .social-links {
+        position: fixed; /* Keep social links fixed */
+        bottom: 10vh; /* Adjust spacing to ensure it doesn't overlap the footer */
+        left: 3vw; /* Keep it dynamically positioned */
+        display: flex;
+        gap: 1.5rem;
+        z-index: 1000; /* Ensure it stays above the footer */
+    }
+  
+    nav ul {
+      gap: 1rem;
+    }
+  
+    nav {
+      padding: 1rem 3%;
+    }
+  }

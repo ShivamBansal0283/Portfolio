@@ -1,0 +1,41 @@
+Tech Stack Section Styling
+.tech-stack-section {
+    background-color: #f5f5dc;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .tech-stack-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b5a2b;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack-section p {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+  }
+  
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-icon {
+    font-size: 3rem;
+    color: #8b5a2b;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.1);
+    color: #6b4226;
+  }
+
+  
